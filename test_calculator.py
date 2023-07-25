@@ -18,6 +18,9 @@ class Test(TestCase):
     def test_calculator_send_a_error_message_when_there_are_two_delimiters_together(self):
         self.assertEqual(add('175.2,\n35'), 'Number expected but "\n" found at position 6.')
 
+    def test_calculator_send_a_error_message_when_there_are_a_delimiter_at_the_end(self):
+        self.assertEqual(add('1,3,'), 'Number expected but EOF found.')
+
 
 """
 class Test(TestCase):

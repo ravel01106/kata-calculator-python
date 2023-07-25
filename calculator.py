@@ -8,6 +8,9 @@ def contain_two_different_delimiter(numbers):
 
 
 def add(numbers='0'):
+    if not numbers[len(numbers) - 1].isnumeric():
+        return "Number expected but EOF found."
+
     if ',' in numbers:
         position = contain_two_different_delimiter(numbers)
         if position != -1:
